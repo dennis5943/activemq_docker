@@ -1,0 +1,8 @@
+FROM python:3.8.13-slim-buster
+
+ADD . /app
+
+RUN pip3 install stomp.py
+WORKDIR /app
+
+CMD ["python3", "listener.py"]
